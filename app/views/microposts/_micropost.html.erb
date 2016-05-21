@@ -1,6 +1,8 @@
 
 <li class="media comment">
-
+  <a href="<%= user_path(current_user) %>">
+    <%= gravatar_for current_user, size: 52 %>
+  </a>
   <div class="media-body">
     <h4 class="media-heading"><%=link_to micropost.user.name,micropost.user,target: '_blank' %> says
       <small class="text-muted">[at <%= micropost.created_at.strftime('%-d %B %Y, %H:%M:%S') %>]</small></h4>
